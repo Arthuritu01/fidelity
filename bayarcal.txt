@@ -1,0 +1,184 @@
+/**
+* Name: Erwin A. Bayarcal
+* Section: Fidelity
+* Year: 4th Year
+*/
+
+
+import java.util.Scanner;
+
+public class erwin {
+    
+
+    public static Scanner input = new Scanner(System.in);
+public static double quantity,total,pay,choose,price,ftotal;	
+	public static void order(){
+		Scanner scan = new Scanner(System.in);
+
+		System.out.println("ARTHUR'S BUFFET");
+		
+
+		
+		while(true){
+			System.out.println("Foods ,Enter 1");
+			System.out.println("Snacks, Enter 2");
+			System.out.println("Beverages, Enter 3");
+			System.out.println("To Exit, Enter 4");
+
+			System.out.println();
+			System.out.println("Enter your choice::");
+			int choice = scan.nextInt();
+
+			switch(choice){
+			case 1: System.out.println("FoodsItem");
+			FoodsItem();
+			break;
+			case 2: System.out.println("SnacksItem");
+			SnacksItem();
+			break;
+			case 3: System.out.println("BeveragesItem");
+			BeveragesItem();
+			break;
+			case 4: System.out.println("Thanks for ordering from Arthur's");
+			System.exit(0);
+			break;
+			default: System.out.println("Incorrect input!!! Please re-enter choice from our menu");
+			}
+		}
+
+	}
+
+	public static void FoodsItem(){
+	
+            System.out.println("You get:");
+		System.out.println("1: Liempo = 120 php");
+		System.out.println("2: Tonkatsu = 90 php");
+		System.out.println("3: Footlong = 52 php");
+               int yourOrder =input.nextInt();
+                if(yourOrder == 1){
+                    price = 120;
+                    System.out.print("Enter the quantity of your order: ");
+                    quantity = input.nextInt();
+                    
+                    
+                }
+                else if(yourOrder == 1){
+                    price = 90;
+                    System.out.print("Enter the quantity of your order: ");
+                    quantity = input.nextInt();
+                    total = price * quantity;
+                    ftotal += total;
+                }
+                else if(yourOrder == 1){
+                    price = 52;
+                    total += price;
+                    System.out.print("Enter the quantity of your order: ");
+                    quantity = input.nextInt();
+                }
+                else{
+                    System.out.println("Out of option");
+                }
+               
+            System.out.println("Enter a payment ");
+    pay = input.nextDouble();
+if(pay <=total){
+System.out.println("Not enough payment");
+}else{
+
+double change = pay - ftotal;
+System.out.println("Total price is " + change);
+	}
+        }
+
+	public static void SnacksItem(){
+		System.out.println("You get:");
+		System.out.println("Fries= 60 php");
+		System.out.println("KwekKwek= 20 php");
+        System.out.println("Isaw= 6 php");
+                int yourOrder =input.nextInt();
+                if(yourOrder == 1){
+                    price = 60;
+                    total += price;
+                    System.out.print("Enter the quantity of your order: ");
+                    quantity = input.nextInt();
+                }
+                else if(yourOrder == 2){
+                    price = 20;
+                    total += price;
+                    System.out.print("Enter the quantity of your order: ");
+                    quantity = input.nextInt();
+                }
+                else if(yourOrder == 3){
+                    price = 6;
+                    total += price;
+                    System.out.print("Enter the quantity of your order: ");
+                    quantity = input.nextInt();
+                }
+                else{
+                    System.out.println("Out of option");
+                }
+                
+      System.out.println("Enter a payment ");
+    pay = input.nextDouble();
+if(pay <=total){
+System.out.println("Not enough payment");
+}else{
+
+double change = pay - ftotal;
+System.out.println("Total price is " + change);
+	}
+        }
+
+	public static void BeveragesItem(){
+		System.out.println("You get:");
+		System.out.println("Coke= 20");
+		System.out.println("Sprite= 25");
+		System.out.println("Tequila= 190");
+                int yourOrder =input.nextInt();
+                if(yourOrder == 1){
+                    price = 20;
+                    total += price;
+                    System.out.print("Enter the quantity of your order: ");
+                    quantity = input.nextInt();
+                }
+                else if(yourOrder == 2){
+                    price = 25;
+                    total += price;
+                    System.out.print("Enter the quantity of your order: ");
+                    quantity = input.nextInt();
+                }
+                else if(yourOrder == 3){
+                    price = 190;
+                    total += price;
+                    System.out.print("Enter the quantity of your order: ");
+                    quantity = input.nextInt();
+                }
+                else{
+                    System.out.println("Out of option");
+                }
+                
+      
+
+    System.out.println("Enter a payment ");
+    pay = input.nextDouble();
+if(pay <=total){
+System.out.println("Not enough payment");
+}else{
+
+double change = pay - ftotal;
+System.out.println("Total price is " + change);
+	}
+
+if(choose==4) {
+             System.exit(0); 
+}else{
+         System.out.println("Choose 1 to 4 only!");
+order();
+}
+        
+}
+public static void main(String[] args) {
+order();
+	
+}
+}
